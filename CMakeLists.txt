@@ -4,6 +4,8 @@ project(led_matrix)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(ARCH arm)
+set(CMAKE_CXX_COMPILER arm-linux-gnueabi-g++)
 
 add_library(led_matrix_core
     src/core/led_matrix_connector/LEDMatrixConnector.cpp
