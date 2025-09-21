@@ -8,8 +8,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_library(led_matrix_core
     src/core/led_matrix_connector/LEDMatrixConnector.cpp
     src/core/led_matrix_connector/LEDMatrixConnector.hpp
-    src/core/rgb_image/RGBImage.cpp
-    src/core/rgb_image/RGBImage.hpp
+    src/core/rgb/RGBImage.cpp
+    src/core/rgb/RGBImage.hpp
+    src/core/rgb/RGBPixel.hpp
 )
 target_include_directories(led_matrix_core PUBLIC src/core)
 

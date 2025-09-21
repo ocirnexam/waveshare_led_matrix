@@ -1,7 +1,7 @@
 #ifndef __LED_MATRIX_CONNECTOR_HPP_INCLUDED
 #define __LED_MATRIX_CONNECTOR_HPP_INCLUDED
 
-#include "rgb_image/RGBImage.hpp"
+#include "rgb/RGBImage.hpp"
 
 class LEDMatrixConnector {
     private:
@@ -13,7 +13,7 @@ class LEDMatrixConnector {
 
         void Initialize();
         void Clear();
-        void Draw(RGBImage& image);
+        void Draw(rgb::RGBImage& image);
         void Update();
 };
 

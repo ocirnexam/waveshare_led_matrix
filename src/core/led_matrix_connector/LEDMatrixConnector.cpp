@@ -12,18 +12,15 @@ void LEDMatrixConnector::Clear() {
     // Implementation to clear the LED matrix
 }
 
-void LEDMatrixConnector::Draw(RGBImage& image) {
+void LEDMatrixConnector::Draw(rgb::RGBImage& image) {
     int width = image.GetWidth();
     int height = image.GetHeight();
-    unsigned char* data = image.GetData();
 
     for (int y = 0; y < height; ++y) {
         for (int x = 0; x < width; ++x) {
             int index = (y * width + x) * 3;
-            int r = data[index];
-            int g = data[index + 1];
-            int b = data[index + 2];
-            SetPixel(x, y, r, g, b);
+            rgb::RGBPixel pixel = image.GetPixel(x, y);
+            SetPixel(x, y, pixel.getRed(), pixel.getGreen(), pixel.getBlue());
         }
     }
 }

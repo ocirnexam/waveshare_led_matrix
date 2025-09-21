@@ -1,4 +1,5 @@
 #include "led_matrix_connector/LEDMatrixConnector.hpp"
+#include "rgb/RGBImage.hpp"
 
 #include <iostream>
 
@@ -9,7 +10,7 @@ int main() {
     connector.Initialize();
 
     // Example usage
-    RGBImage image(64, 32);
+    rgb::RGBImage image(64, 32);
     // Fill the image with some color data here...
 
     connector.Draw(image);
